@@ -38,6 +38,7 @@ typingArea.addEventListener('keydown', event => {
 		answer = getAnswer(capitals);
 		typingArea.value = "";
 		updateResults();
+		startMeasuringTime();
 	}
 })
 
