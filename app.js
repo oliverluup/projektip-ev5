@@ -5,22 +5,35 @@ const counters = document.getElementById("counters");
 let correctCounter = 0;
 let falseCounter = 0;
 
-const capitals = {
-	"Estonia": "Tallinn",
-	"Latvia": "Riga",
-	"Lithuania": "Vilnius",
-	"Poland": "Warsaw",
-	"Germany": "Berlin",
-	"Denmark": "Copenhagen",
-	"Sweden": "Stockholm",
-	"Norway": "Oslo",
-	"Finland": "Helsinki",
-	"Russia": "Moscow"
-}
+let capitals = [
+	{
+        "country": "Estonia",
+        "city": "Tallinn"
+    },
+];
+
+fetch("./files/capitals.json")
+	.then(function(response) {
+		return response.json();	
+	})
+	.then(function(data) {
+		capitals = data;
+	});
+
+const inputFile = document.querySelector('input[type="file"]');
+inputFile.addEventListener('change', function (event) {
+	const reader = new FileReader();
+	let fileObject = new Object();
+	reader.onload = function () {
+		capitals = reader.result;
+		capitals = JSON.parse(capitals);
+	}
+	reader.readAsText(inputFile.files[0]);
+}, false)
 
 typingArea.focus();
 
-let answer = getAnswer(capitals).toLowerCase();
+let answer = getAnswer(capitals);
 
 typingArea.addEventListener('keydown', event => {
 	if (event.keyCode == 13) {
@@ -43,30 +56,16 @@ typingArea.addEventListener('keydown', event => {
 })
 
 function pickRandom (obj) {
-	let keys = Object.keys(obj);
-	return keys[keys.length * Math.random() << 0];
+	let questionCount = Object.keys(obj).length;
+	return obj[questionCount * Math.random() << 0];
 }
 
 function getAnswer(obj) {
-	question.innerHTML = pickRandom(obj);
-	return obj[question.innerHTML];
+	tempObject = pickRandom(obj);
+	question.innerHTML = tempObject.country;
+	return tempObject.city;
 }
 
 function updateResults() {
 	counters.innerHTML = `Correct answers: ${correctCounter} False answers: ${falseCounter}`;
 }
-
-//Here begins the code for uploading a file and reading it
-const inputFile = document.querySelector('input[type="file"]');
-inputFile.addEventListener('change', function (event) {
-	const reader = new FileReader();
-	let fileObject = new Object();
-	reader.onload = function () {
-		const lines = reader.result.split('\n').map(function (line) {
-			console.log(line.split(','));
-			return line.split(',');
-		})
-		//SIIN ON POOLELI
-	}
-	reader.readAsText(inputFile.files[0]);
-}, false)
