@@ -5,7 +5,7 @@ let m = "";
 let s = "";
 let TimerIsRunning, timer;
 const MAX_ANSWER_TIME = 45;
-let questionsAmount= count(capitals);
+let questionsAmount= 10;
 
 function count(obj) { return Object.keys(obj).length; }
 
