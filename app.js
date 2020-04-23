@@ -2,10 +2,12 @@ const typingArea = document.getElementById("typing-area");
 const question = document.getElementById("question");
 const result = document.getElementById("result");
 const counters = document.getElementById("counters");
+/*
 const cities = document.getElementById("cities");
 const hotkeys = document.getElementById("hotkeys");
 const english = document.getElementById("english");
 const words = document.getElementById("words");
+*/
 const start = document.getElementById("start");
 const fileSelect = document.getElementById("fileSelect");
 const fileButton = document.getElementById("fileButton");
@@ -19,7 +21,7 @@ typingArea.disabled = true;
 start.disabled = true;
 
 let questionnaire;
-
+/*
 cities.addEventListener("click", function() {
 	fetchData("./files/capitals.json");
 });
@@ -35,7 +37,7 @@ english.addEventListener("click", function() {
 words.addEventListener("click", function() {
 	fetchData("./files/words.json");
 });
-
+*/
 fileButton.addEventListener("click", function() {
 	fileName = fileSelect.options[fileSelect.selectedIndex].text;
 	fetchData("./files/" + fileName);
