@@ -1,0 +1,42 @@
+[
+    {
+        "question": "List all files in directory ",
+        "answer": "ls -la"
+    },
+    {
+        "question": "Follow last part of file",
+        "answer": "tail -f"
+    },
+    {
+        "question": "Quiet program output",
+        "answer": ">> /dev/null"
+    },
+    {
+        "question": "Delete directory",
+        "answer": "rm -r"
+    },
+    {
+        "question": "Previous command as superuser",
+        "answer": "sudo!!"
+    },
+    {
+        "question": "Delete directory",
+        "answer": "rm -r"
+    },
+    {
+        "question": "Add program output to file",
+        "answer": ">>"
+    },
+    {
+        "question": "Create file",
+        "answer": "touch"
+    },
+    {
+        "question": "Make file executable",
+        "answer": "chmod +x"
+    },
+    {
+        "question": "Move 3 directories up",
+        "answer": "cd ../../.."
+    }
+]
