@@ -5,7 +5,7 @@ let m = "";
 let s = "";
 let TimerIsRunning, timer;
 const MAX_ANSWER_TIME = 45;
-let questionsAmount= 10;
+let questionsAmount= 15;
 
 function count(obj) { return Object.keys(obj).length; }
 
@@ -32,7 +32,7 @@ function countTimer (){
 
 function timeoutCounting(){
 	if(mins  != MAX_ANSWER_TIME){
-		timer = setTimeout(countTimer, 100);
+		timer = setTimeout(countTimer, 1000);
 	}	
 }
 
