@@ -2,15 +2,17 @@ const typingArea = document.getElementById("typing-area");
 const question = document.getElementById("question");
 const result = document.getElementById("result");
 const counters = document.getElementById("counters");
-let correctCounter = 0;
-let falseCounter = 0;
-let questionsAmount = 15;
-
 const cities = document.getElementById("cities");
 const hotkeys = document.getElementById("hotkeys");
 const english = document.getElementById("english");
 const words = document.getElementById("words");
 const start = document.getElementById("start");
+const fileSelect = document.getElementById("fileSelect");
+const fileButton = document.getElementById("fileButton");
+let correctCounter = 0;
+let falseCounter = 0;
+let questionAmount = 15;
+let fileName;
 
 updateResults();
 typingArea.disabled = true;
@@ -18,63 +20,26 @@ start.disabled = true;
 
 let questionnaire;
 
-
-/* 	Siin on event listenerid, mis võtavad JSONi failidest nupuvajutusel andmeid.
-	Kuna responsei saamisel tehakse return, siis ma ei osanud nende jaoks
-	funktsioone teha ja tekkis päris rõve koodi kordus.
-*/
 cities.addEventListener("click", function() {
-	fetch("./files/capitals.json")
-	.then(function(response) {
-		return response.json();	
-	})
-	.then(function(data) {
-		questionnaire = data;
-		start.disabled = false;
-	});
-});
-hotkeys.addEventListener("click", function() {
-	fetch("./files/hotkeys.json")
-	.then(function(response) {
-		return response.json();	
-	})
-	.then(function(data) {
-		questionnaire = data;
-		start.disabled = false;
-	});
-});
-english.addEventListener("click", function() {
-	fetch("./files/english.json")
-	.then(function(response) {
-		return response.json();	
-	})
-	.then(function(data) {
-		questionnaire = data;
-		start.disabled = false;
-	});
-});
-words.addEventListener("click", function() {
-	fetch("./files/words.json")
-	.then(function(response) {
-		return response.json();	
-	})
-	.then(function(data) {
-		questionnaire = data;
-		start.disabled = false;
-	});
+	fetchData("./files/capitals.json");
 });
 
-const inputFile = document.querySelector('input[type="file"]');
-inputFile.addEventListener('change', function (event) {
-	const reader = new FileReader();
-	let fileObject = new Object();
-	reader.onload = function () {
-		questionnaire = reader.result;
-		questionnaire = JSON.parse(questionnaire);
-		start.disabled = false;
-	}
-	reader.readAsText(inputFile.files[0]);
-}, false)
+hotkeys.addEventListener("click", function() {
+	fetchData("./files/hotkeys.json");
+});
+
+english.addEventListener("click", function() {
+	fetchData("./files/english.json");
+});
+
+words.addEventListener("click", function() {
+	fetchData("./files/words.json");
+});
+
+fileButton.addEventListener("click", function() {
+	fileName = fileSelect.options[fileSelect.selectedIndex].text;
+	fetchData("./files/" + fileName);
+});
 
 start.addEventListener("click", function() {
 	if (questionnaire != undefined) {
@@ -82,6 +47,7 @@ start.addEventListener("click", function() {
 		typingArea.focus();
 		correctCounter = 0;
 		falseCounter = 0;
+		resetTimer();
 		updateResults();
 		startMeasuringTime();
 	}
@@ -105,7 +71,7 @@ start.addEventListener("click", function() {
 			typingArea.value = "";
 			updateResults();
 			startMeasuringTime();
-			if (correctCounter + falseCounter == questionsAmount) {
+			if (correctCounter + falseCounter == questionAmount) {
 				typingArea.disabled = true;
 			}
 		}
@@ -125,4 +91,15 @@ function getAnswer(obj) {
 
 function updateResults() {
 	counters.innerHTML = `${correctCounter}/${questionAmount}`;
+}
+
+function fetchData(fileName) {
+	fetch(fileName)
+	.then(function(response) {
+		return response.json();	
+	})
+	.then(function(data) {
+		questionnaire = data;
+		start.disabled = false;
+	});
 }
