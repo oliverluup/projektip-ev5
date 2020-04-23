@@ -4,7 +4,7 @@ const result = document.getElementById("result");
 const counters = document.getElementById("counters");
 let correctCounter = 0;
 let falseCounter = 0;
-let questionAmount = 15;
+let questionsAmount = 15;
 
 const cities = document.getElementById("cities");
 const hotkeys = document.getElementById("hotkeys");
