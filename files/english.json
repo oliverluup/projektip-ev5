@@ -18,5 +18,25 @@
     {
         "question": "Laud",
         "answer": "Table"
+    },
+    {
+        "question": "Haamer",
+        "answer": "Hammer"
+    },
+    {
+        "question": "Küsimus",
+        "answer": "Question"
+    },
+    {
+        "question": "Vastus",
+        "answer": "Answer"
+    },
+    {
+        "question": "Taim",
+        "answer": "Plant"
+    },
+    {
+        "question": "Klaas",
+        "answer": "Glass"
     }
 ]
