@@ -18,5 +18,25 @@
     {
         "question": "Finland",
         "answer": "Helsinki"
+    },
+    {
+        "question": "Luxemburg",
+        "answer": "Luxemburg"
+    },
+    {
+        "question": "Italy",
+        "answer": "Roma"
+    },
+    {
+        "question": "Australia",
+        "answer": "Canberra"
+    },
+    {
+        "question": "Fiji",
+        "answer": "Suva"
+    },
+    {
+        "question": "Peru",
+        "answer": "Lima"
     }
 ]
