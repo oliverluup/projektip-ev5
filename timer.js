@@ -46,3 +46,11 @@ function stopTimer(){
     clearTimeout(timer);
 }
 
+function resetTimer(){
+    clearTimeout(timer);
+    display.innerHTML = "00:00";
+    secs = 0;
+    mins = 0;
+    m = "";
+    s = "";
+}
