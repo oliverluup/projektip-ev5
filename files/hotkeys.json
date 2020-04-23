@@ -1,0 +1,22 @@
+[
+    {
+        "question": "Ctrl+C",
+        "answer": "Copy"
+    },
+    {
+        "question": "Ctrl+V",
+        "answer": "Paste"
+    },
+    {
+        "question": "Ctrl+X",
+        "answer": "Cut"
+    },
+    {
+        "question": "Ctrl+Z",
+        "answer": "Undo"
+    },
+    {
+        "question": "Ctrl+A",
+        "answer": "Select All"
+    }
+]
