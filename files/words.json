@@ -18,5 +18,25 @@
     {
         "question": "Ansambel",
         "answer": "Bänd"
+    },
+    {
+        "question": "Diversioon",
+        "answer": "Õõnestustegevus"
+    },
+    {
+        "question": "Tumba",
+        "answer": "Iste"
+    },
+    {
+        "question": "Turgor",
+        "answer": "Raku siserõhk"
+    },
+    {
+        "question": "Sille",
+        "answer": "Tugede vaheline kaugus"
+    },
+    {
+        "question": "Kalle",
+        "answer": "Viltu asend"
     }
 ]
