@@ -1,1 +1,63 @@
-crfrvfbdfr
+body {
+    margin-top: 0px;
+    background: #E9DBCF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+}
+
+.sisu {
+    width: 700px;
+    height: 597px;
+    margin-top: 50px;
+    background: #FAF5F1;
+    padding: 50px 90px 50px 90px;
+    box-shadow: 0px 4px 37px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.driller{
+    width: 182px;
+    height: 125px;
+    background: #FAF5F1;
+    box-shadow: 0px 4px 11px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-right: 90px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #393A34;
+
+}
+h1 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 42px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #5D6475;
+
+}
+
+.answer {
+    background: #E9DBCF;
+    box-shadow: inset 3px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.start {
+    box-shadow: 2px 3px 7px rgba(0, 0, 0, 0.25);
+    background: #BA9883;
+}
