@@ -13,7 +13,7 @@ const fileSelect = document.getElementById("fileSelect");
 const fileButton = document.getElementById("fileButton");
 let correctCounter = 0;
 let falseCounter = 0;
-let questionAmount = 15;
+let questionsAmount = 15;
 let fileName;
 
 updateResults();
@@ -73,7 +73,7 @@ start.addEventListener("click", function() {
 			typingArea.value = "";
 			updateResults();
 			startMeasuringTime();
-			if (correctCounter + falseCounter == questionAmount) {
+			if (correctCounter + falseCounter == questionsAmount) {
 				typingArea.disabled = true;
 			}
 		}
@@ -92,7 +92,7 @@ function getAnswer(obj) {
 }
 
 function updateResults() {
-	counters.innerHTML = `${correctCounter}/${questionAmount}`;
+	counters.innerHTML = `${correctCounter}/${questionsAmount}`;
 }
 
 function fetchData(fileName) {
