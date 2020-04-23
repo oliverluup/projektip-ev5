@@ -21,7 +21,8 @@ var team = {
     "Keijo",
     "Rando",
     "Erki",
-    "Joel"
+    "Joel",
+    "Erol"
 };
 team.workWell();
 ```
