@@ -25,7 +25,27 @@
 	<button id="start">START</button>
 	<br>
 	<br>
-	<input type="file" />
+	<form action="upload.php" method="post" enctype="multipart/form-data">
+		Vali JSON formaadis ülesanne:
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		<input type="submit" value="Lae üles" name="submit">
+	</form>
+	<?php 
+		$dirpath = "files";
+		$filenames = "";
+		if (is_dir($dirpath)) {
+			$files = opendir($dirpath);
+			if ($files) {
+				while (($filename = readdir($files)) != false) {
+					if ($filename != "." && $filename != "..") {
+						$filenames = $filenames."<option>$filename</option>";
+					}
+				}
+			}
+		}
+	?>
+	<select id="fileSelect"><?php echo $filenames; ?></select>
+	<button id="fileButton">Vali ülesande fail</button>
 	<script src="app.js"></script>
 	<script src="timer.js"></script>
 </body>
