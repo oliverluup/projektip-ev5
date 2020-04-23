@@ -5,7 +5,6 @@ let m = "";
 let s = "";
 let TimerIsRunning, timer;
 const MAX_ANSWER_TIME = 45;
-let questionsAmount= 15;
 
 function count(obj) { return Object.keys(obj).length; }
 
@@ -46,3 +45,11 @@ function stopTimer(){
     clearTimeout(timer);
 }
 
+function resetTimer(){
+    clearTimeout(timer);
+    display.innerHTML = "00:00";
+    secs = 0;
+    mins = 0;
+    m = "";
+    s = "";
+}
