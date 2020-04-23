@@ -8,10 +8,12 @@
 </head>
 
 <body>
+	<!--
 	<button id="english">Inglise keel</button>
 	<button id="cities">Pealinnad</button>
 	<button id="words">Võõrsõnad</button>
 	<button id="hotkeys">Kiirklahvid</button>
+	-->
 	<h1>Drill Your Typing</h1>
 	<div class="timer">
 		<div id="mins_secs">00:00</div>
