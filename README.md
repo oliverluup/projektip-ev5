@@ -11,6 +11,8 @@ Driller aims to help to learn things by heart. It has some built in lessons but 
 * GitHub for versioning and projeckt management [https://github.com/oliverluup/projektip-ev5](https://github.com/oliverluup/projektip-ev5 "GitHub")
 * MS Teams & Discord for communication
 * Toggle [https://toggl.com/app/reports/detailed/3458173/period/thisWeek/projects/160060688](https://toggl.com/app/reports/detailed/3458173/period/thisWeek/projects/160060688 "Toggle")
+* Zone [https://ta19pupart.itmajakas.ee/driller/]
+(https://ta19pupart.itmajakas.ee/driller/)
 
 ***
 
