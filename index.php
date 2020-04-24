@@ -8,25 +8,28 @@
 </head>
 
 <body>
-	<!--
-	<button id="english">Inglise keel</button>
-	<button id="cities">Pealinnad</button>
-	<button id="words">Võõrsõnad</button>
-	<button id="hotkeys">Kiirklahvid</button>
-	-->
-	<h1>Drill Your Typing</h1>
-	<div class="timer">
-		<div id="mins_secs">00:00</div>
-	</div>
-	<div id="question"></div>
-	<input type="text" id="typing-area">
-	<div id="result"></div>
-	<br>
-	<div id="counters"></div>
-	<br>
-	<button id="start">START</button>
-	<br>
-	<br>
+	<div class="header">
+        <div class="driller">Driller</div>
+	    <button id="english">Inglise keel</button>
+	    <button id="cities">Pealinnad</button>
+	    <button id="words">Võõrsõnad</button>
+        <button id="hotkeys">Kiirklahvid</button></div>
+    <div class="sisu">
+	    <h1>Drill Your Typing</h1>
+	    <div class="timer">
+		    <div id="mins_secs">00:00</div>
+	    </div>
+	    <div id="question" class="question"></div>
+	    <input type="text" id="typing-area" class="answer">
+	    <div id="result"></div>
+	    <br>
+	    <div id="counters"></div>
+	    <br>
+	    <button id="start" class="start">START</button>
+	    <br>
+	    <br>
+        <input type="file" />
+    </div>
 	<form action="upload.php" method="post" enctype="multipart/form-data">
 		Vali JSON formaadis ülesanne:
 		<input type="file" name="fileToUpload" id="fileToUpload">
