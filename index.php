@@ -9,11 +9,8 @@
 
 <body>
 	<div class="header">
-        <div class="driller">Driller</div>
-	    <button id="english">Inglise keel</button>
-	    <button id="cities">Pealinnad</button>
-	    <button id="words">Võõrsõnad</button>
-        <button id="hotkeys">Kiirklahvid</button></div>
+		<div class="driller">Driller</div>
+	</div>
     <div class="sisu">
 	    <h1>Drill Your Typing</h1>
 	    <div class="timer">
@@ -28,29 +25,28 @@
 	    <button id="start" class="start">START</button>
 	    <br>
 	    <br>
-        <input type="file" />
-    </div>
-	<form action="upload.php" method="post" enctype="multipart/form-data">
-		Vali JSON formaadis ülesanne:
-		<input type="file" name="fileToUpload" id="fileToUpload">
-		<input type="submit" value="Lae üles" name="submit">
-	</form>
-	<?php 
-		$dirpath = "files";
-		$filenames = "";
-		if (is_dir($dirpath)) {
-			$files = opendir($dirpath);
-			if ($files) {
-				while (($filename = readdir($files)) != false) {
-					if ($filename != "." && $filename != "..") {
-						$filenames = $filenames."<option>$filename</option>";
+		<form action="upload.php" method="post" enctype="multipart/form-data">
+			Vali JSON formaadis ülesanne:
+			<input type="file" name="fileToUpload" id="fileToUpload">
+			<input type="submit" value="Lae üles" name="submit">
+		</form>
+		<?php 
+			$dirpath = "files";
+			$filenames = "";
+			if (is_dir($dirpath)) {
+				$files = opendir($dirpath);
+				if ($files) {
+					while (($filename = readdir($files)) != false) {
+						if ($filename != "." && $filename != "..") {
+							$filenames = $filenames."<option>$filename</option>";
+						}
 					}
 				}
 			}
-		}
-	?>
-	<select id="fileSelect"><?php echo $filenames; ?></select>
-	<button id="fileButton">Vali ülesande fail</button>
+		?>
+		<select id="fileSelect"><?php echo $filenames; ?></select>
+		<button id="fileButton">Vali ülesande fail</button>
+    	</div>
 	<script src="app.js"></script>
 	<script src="timer.js"></script>
 </body>
