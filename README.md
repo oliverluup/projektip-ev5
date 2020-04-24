@@ -10,7 +10,7 @@ Driller aims to help to learn things by heart. It has some built in lessons but 
 * Figma for design [https://www.figma.com/file/jJJ1KHKcFepP77RuRguRKU/projekt5?node-id=0%3A1](https://www.figma.com/file/jJJ1KHKcFepP77RuRguRKU/projekt5?node-id=0%3A1 "Design")
 * GitHub for versioning and projeckt management [https://github.com/oliverluup/projektip-ev5](https://github.com/oliverluup/projektip-ev5 "GitHub")
 * MS Teams & Discord for communication
-* Toggle https://github.com/oliverluup/projektip-ev5/blob/master/toggl/Toggl_time_entries_2020-04-20_to_2020-04-26.pdf
+* Toggl https://github.com/oliverluup/projektip-ev5/blob/master/toggl/Toggl_time_entries_2020-04-20_to_2020-04-26%20(1).pdf
 * Zone https://ta19pupart.itmajakas.ee/driller/
 
 ***
